@@ -1,0 +1,45 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Form 
+  link(rel='stylesheet' href='style2.css')
+  link(rel='stylesheet' href='./bootstrap-4.0.0-dist/css/bootstrap.css')
+.container
+  header
+    h1#title Register user
+  #form-wrapper
+    form#register-form(action='register/user')
+      .form-row
+        .col.form-group
+          input.form-control(placeholder='First name' name='firstname')
+        .col.form-group
+          input.form-control(placeholder='Last name' name='lastname')
+        .col.form-group
+          input.form-control(placeholder='User name' name='username')
+      .form-row
+        .col.form-group.align
+          select.form-control(name='gender')
+            option(value='fulltime')  Male
+            option(value='parttime') Female
+        .col.form-group
+          input.form-control(type='date' name='dob')
+      .form-row
+        .col.form-group
+          input.form-control(placeholder='NIN' name='nin')
+        .col.form-group
+          input.form-control(placeholder='Phone number' name='phonenumber')
+        .col.form-group.align
+          select.form-control(name='employeetype')
+            option(value='fulltime')  Full time
+            option(value='parttime') Part time
+        .form-col
+          .col.form-group
+            register
+              input.btn.btn-primary.btn-block(type="submit")
+             
+  p.copyright
+    small
+      u This form has been Comissioned by the government of Uganda
+  script(src='register.js')

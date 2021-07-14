@@ -1,0 +1,38 @@
+
+.circle{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: cadetblue;
+    margin: 0 auto;
+}
+
+.container{
+    width: 70%;
+    margin: 0 15% 0 15%;
+    background-color: darkslategray;
+}
+
+ul{
+    list-style: none;
+    color: white;
+}
+
+.small-c{
+    height: 50px;
+    width: 50px;
+}
+
+li{
+    /* border-bottom:1px solid mediumseagreen; */
+    padding: 25px;
+    margin: 5px ;
+    text-align: center;
+    font-size: 18px;
+}
+
+ul>li>ul>li{
+    padding: 12.5px;
+    margin: 2.5px ;
+    font-size: 18px;
+}

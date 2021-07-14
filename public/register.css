@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
+.container {
+  padding: 0% 4%;
+}
+
+
+body {
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.25rem;
+  /* background-color: #D8DBE2; */
+
+}
+
+h1, p {
+  text-align: center;
+}
+
+::placeholder {
+  color: black;
+}
+
+#title {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  
+#description {
+    text-align: center;
+  }
+  
+label {
+  font-size: 0.8em !important;
+}
+
+#register-form {
+  background-color: #8e9aaf34;
+  padding: 5%;
+  padding-bottom: 3%;
+  padding-top: 2.5%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  border-radius: 5px;
+
+}
+
+.form-group {
+  margin-bottom: 1%;
+}
+
+#dropdown {
+  display: block;
+  width: 100%;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  padding: 1% 1% 1% 1%;
+  background-color: white;
+  border: 3px #D8DBE2 solid;
+}
+
+
+.form-control {
+  width: 97%;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  padding: 1% 1% 1% 1%;
+  margin: 1% 0%;
+  border: 3px #D8DBE2 solid;
+}
+
+.form-control-2 {
+  width: 46.5%;
+  display: inline-block;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  padding: 1% 1% 1% 1%;
+  margin: 1% 0%;
+  border: 3px #D8DBE2 solid;
+}
+
+.form-float {
+  float: right;
+}
+
+button {
+  display: block;
+  color: #D8DBE2;
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 20%;
+  font-size: 1.4rem;
+  padding: 1%;
+  border: 2px #D8DBE2 solid;
+  border-radius: 5px;
+  background-color: #4115D6;
+  color: white;
+}
+
+@media (max-width: 495px) { 
+  #title {
+    font-size: 2.2rem;
+  } 
+}
+
+
+input[type=radio] {
+  border: 0px;
+  width: 4.5%;
+  height: 1rem;
+}
+
+input[type=checkbox] {
+  border: 0px;
+  width: 4.5%;
+  height: 1rem;
+}
+
+input:focus { 
+  outline: none !important;
+  border-color: #719ECE;
+  box-shadow: 0 0 5px #719ECE;
+}
+
+
+
+select:focus { 
+  outline: none !important;
+}
