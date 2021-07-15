@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const homeRoutes=require("./routes/homeRoutes.js")
 const registerRoutes=require("./routes/registerRoutes.js")
+const userRoutes=require("./routes/userRoutes.js")
 
 //Instantiations
 const app = express()
@@ -20,27 +21,10 @@ app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.urlencoded({extended:true}))
 
 
-
 // Routes
 app.use("/",homeRoutes)
 app.use("/register",registerRoutes)
-
-
-app.get("/user",(req,res)=>{
-    res.render('user')
-})
-
-app.get("/registerUser",(req,res)=>{
-    res.render('registerUser')
-})
-
-
-
-
-app.post("/register",(req,res)=>{
-    console.log(req.body);
-    res.send("This has been submitted");
-})
+app.use("/user",userRoutes)
 
 
 // handle non existing routes
