@@ -6,24 +6,20 @@ router.get("/",(req,res)=>{
     res.render('register_washer',{title:" Car Washer"})
 })
 
-router.get("/user",(req,res)=>{
-    res.render("user")
-})
-
 router.get("/car",(req,res)=>{
-    res.render("register_vehicle.pug")
+    res.render("register_vehicle.pug",{title:"Car registry", routeName:"car"} )
 })
 
 router.get("/washer",(req,res)=>{
-    res.render("register_washer.pug")
+    res.render("register_washer.pug",{title:"Washer registry", routeName:"washer"})
 })
 
 router.get("/cost",(req,res)=>{
-    res.render("register_expenses.pug")
+    res.render("register_expenses.pug",{title:"Cost registry", routeName:"cost"})
 })
 
 router.get("/user",(req,res)=>{
-    res.render('registerUser')
+    res.render('register_user',{title:"User registry", routeName:"user"})
 })
 
 // post routes

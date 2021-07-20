@@ -6,24 +6,25 @@ head
   link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
   link(rel='stylesheet' href='./bootstrap-5.0.2-dist/css/bootstrap.css')
   link(rel='stylesheet' href='style.css')
-  title doc
-// logo
-.container.fit-content.bg-light.margin-auto
-  img.d-inline-block.align-text-bottom(src='icons8-car-cleaning-100.png' alt='' width='72' height='57.6')
-  h1.inline-block ZaWash 
-// Navigation bar
-nav.navbar.navbar-expand-lg.navbar-light.sticky-top
-  .container-fluid
-    ul.navbar-nav
-      li.nav-item
-        a.nav-link.active(aria-current='page' href='/register/car') Car Tracking
-      li.nav-item
-        a.nav-link(href='/register/cost') Cost Monitor
-      li.nav-item
-        a.nav-link(href='/register/washer') Car Washers
-  a(href='./register/user')
-    img.nav-item(src='https://img.icons8.com/ios-filled/50/000000/user-male-circle.png')
-block content
+  title #{title}
+body 
+  // logo
+  .container.fit-content.bg-light.margin-auto
+    img.d-inline-block.align-text-bottom(src='icons8-car-cleaning-100.png' alt='' width='72' height='57.6')
+    h1.inline-block ZaWash 
+  // Navigation bar
+  nav.navbar.navbar-expand-lg.navbar-light.sticky-top
+    .container-fluid
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(aria-current='page' href='/' class=routeName=="car"? "active": "") Car Tracking
+        li.nav-item
+          a.nav-link(href='/register/cost' class=routeName=="cost"? "active": "") Cost Monitor
+        li.nav-item
+          a.nav-link(href='/register/washer' class=routeName=="washer"? "active": "") Car Washers
+    a(href='/register/user' class=routeName=="user"? "active": "")
+      img.nav-item(src='https://img.icons8.com/ios-filled/50/000000/user-male-circle.png')
+  block content
 .footer.fixed-bottom
   | &copy; Lorem ipsum dolor sit amet.
 
