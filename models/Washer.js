@@ -11,7 +11,7 @@ const washerSchema = new mongoose.Schema({
         type: String,
         trim: true,
       },
-    date: {
+    dob: {
         type: Date,
         trim: true,
       },
@@ -27,7 +27,7 @@ const washerSchema = new mongoose.Schema({
         type: String,
         trim: true,
     },
-    residence: {
+    employeetype: {
         type: String,
         trim: true,
     }      

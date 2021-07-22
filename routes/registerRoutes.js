@@ -1,6 +1,10 @@
 const express = require("express")
 const mongoose=require("mongoose")
+const Vehicle = require("../models/Vehicle")
 const Washer = require("../models/Washer")
+const Expense = require("../models/Expense")
+// const Manager = require("../models/Manager")
+const User = require("../models/User")
 
 const router =express.Router()
 
@@ -25,10 +29,37 @@ router.get("/user",(req,res)=>{
 })
 
 // post routes
-router.post("/manager",(req,res)=>{
+const msg="THIS form has been submitted"
+
+router.post("/vehicle",(req,res)=>{
     console.log(req.body);
-    res.send("This has been submitted");
+        // savingto the database
+    const vehicle =new Vehicle(req.body)
+    vehicle.save()
+        .then(()=>{
+            res.send(msg);
+        })
+        .catch((err)=>{
+            console.log(err);
+            res.send('This has NOT been submitted because of an error');
+            
+        })
 })
+
+// router.post("/manager",(req,res)=>{
+//     console.log(req.body);
+//         // savingto the database
+//     const manager =new Manager(req.body)
+//     manager.save()
+//         .then(()=>{
+//             res.send(msg);
+//         })
+//         .catch((err)=>{
+//             console.log(err);
+//             res.send('This has NOT been submitted because of an error');
+            
+//         })
+// })
 
 router.post("/washer",(req,res)=>{
     console.log(req.body);
@@ -37,7 +68,7 @@ router.post("/washer",(req,res)=>{
     const washer =new Washer(req.body)
     washer.save()
         .then(()=>{
-            res.send("This has been submitted");
+            res.send(msg);
         })
         .catch((err)=>{
             console.log(err);
@@ -47,14 +78,32 @@ router.post("/washer",(req,res)=>{
 
 })
 
-router.post("/expenses  ",(req,res)=>{
+router.post("/expenses",(req,res)=>{
     console.log(req.body);
-    res.send("This has been submitted");
+    const expense =new Expense(req.body)
+    expense.save()
+        .then(()=>{
+            res.send(msg);
+        })
+        .catch((err)=>{
+            console.log(err);
+            res.send('This has NOT been submitted because of an error');
+            
+        })
 })
 
 router.post("/user",(req,res)=>{
     console.log(req.body);
-    res.send("This has been submitted");
+    const user =new User(req.body)
+    user.save()
+        .then(()=>{
+            res.send(msg);
+        })
+        .catch((err)=>{
+            console.log(err);
+            res.send('This has NOT been submitted because of an error');
+            
+        })
 })
 
 
