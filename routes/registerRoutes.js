@@ -1,4 +1,6 @@
 const express = require("express")
+const mongoose=require("mongoose")
+const Washer = require("../models/Washer")
 
 const router =express.Router()
 
@@ -23,7 +25,34 @@ router.get("/user",(req,res)=>{
 })
 
 // post routes
-router.post("/",(req,res)=>{
+router.post("/manager",(req,res)=>{
+    console.log(req.body);
+    res.send("This has been submitted");
+})
+
+router.post("/washer",(req,res)=>{
+    console.log(req.body);
+
+    // savingto the database
+    const washer =new Washer(req.body)
+    washer.save()
+        .then(()=>{
+            res.send("This has been submitted");
+        })
+        .catch((err)=>{
+            console.log(err);
+            res.send('This has NOT been submitted because of an error');
+            
+        })
+
+})
+
+router.post("/expenses  ",(req,res)=>{
+    console.log(req.body);
+    res.send("This has been submitted");
+})
+
+router.post("/user",(req,res)=>{
     console.log(req.body);
     res.send("This has been submitted");
 })
